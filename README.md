@@ -35,7 +35,7 @@ flowchart TD
     end
 
     subgraph Output
-        FinalDecision["Final Decision / Recommendation"]
+        FinalDecision["Final Decision/Recommendation"]
     end
 
     Input --> Gradio
@@ -51,7 +51,9 @@ flowchart TD
     FinalDecision --> Gradio
 ```
 
-##Installation
+---
+
+## Installation
 
 Clone the repository:
 
