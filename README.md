@@ -1,16 +1,17 @@
-AI Judge
+# AI Judge
 
 AI Judge is a Python-based system that simulates a multi-agent decision-making pipeline. Agents analyze input scenarios, propose decisions, and a Judge AI evaluates outputs to provide a final recommendation. A Gradio interface allows easy, interactive testing.
 
-Features
+---
 
-Dynamic Agent Selection: Orchestrator chooses which AI agents to run based on input complexity.
+## Features
 
-Agent Outputs: Each agent produces decisions with confidence, evidence, assumptions, and potential failure modes.
+- **Dynamic Agent Selection:** Orchestrator chooses which AI agents to run based on input complexity.  
+- **Agent Outputs:** Each agent produces decisions with confidence, evidence, assumptions, and potential failure modes.  
+- **Judge Evaluation:** Considers agent outputs and the original input text to produce a final decision: ACCEPT, REJECT, or ESCALATE.  
+- **Interactive Demo:** Test your scenarios via a Gradio web interface.
 
-Judge Evaluation: Considers agent outputs and the original input text to produce a final decision: ACCEPT, REJECT, or ESCALATE.
-
-Interactive Demo: Test your scenarios via a Gradio web interface.
+---
 
 ## System Architecture
 
@@ -48,7 +49,6 @@ flowchart TD
     Judge --> Controller
     Controller --> FinalDecision
     FinalDecision --> Gradio
-
 
 Installation
 
