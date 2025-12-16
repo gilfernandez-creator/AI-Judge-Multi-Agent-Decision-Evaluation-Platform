@@ -26,12 +26,12 @@ flowchart TD
     end
 
     subgraph CoreLogic
-        Orchestrator["OrchestratorAI\n(selects agents based on input)"]
-        AgentConservative["AgentConservative\n(proposes decisions)"]
-        AgentOptimistic["AgentOptimistic\n(proposes decisions)"]
-        Evaluator["Evaluator\n(aggregates agent outputs)"]
-        Judge["DecisionJudge\n(analyzes agent outputs + input)"]
-        Controller["Controller\n(final decision logic)"]
+        Orchestrator["OrchestratorAI<br>(selects agents based on input)"]
+        AgentConservative["AgentConservative<br>(proposes decisions)"]
+        AgentOptimistic["AgentOptimistic<br>(proposes decisions)"]
+        Evaluator["Evaluator<br>(aggregates agent outputs)"]
+        Judge["DecisionJudge<br>(analyzes agent outputs + input)"]
+        Controller["Controller<br>(final decision logic)"]
     end
 
     subgraph Output
