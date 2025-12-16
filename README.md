@@ -12,6 +12,44 @@ Judge Evaluation: Considers agent outputs and the original input text to produce
 
 Interactive Demo: Test your scenarios via a Gradio web interface.
 
+## System Architecture
+
+```mermaid
+flowchart TD
+    subgraph User
+        Input["User Input / Ticket"]
+    end
+
+    subgraph Interface
+        Gradio["Gradio Web Interface"]
+    end
+
+    subgraph CoreLogic
+        Orchestrator["OrchestratorAI\n(selects agents based on input)"]
+        AgentConservative["AgentConservative\n(proposes decisions)"]
+        AgentOptimistic["AgentOptimistic\n(proposes decisions)"]
+        Evaluator["Evaluator\n(aggregates agent outputs)"]
+        Judge["DecisionJudge\n(analyzes agent outputs + input)"]
+        Controller["Controller\n(final decision logic)"]
+    end
+
+    subgraph Output
+        FinalDecision["Final Decision / Recommendation"]
+    end
+
+    Input --> Gradio
+    Gradio --> Orchestrator
+    Orchestrator --> AgentConservative
+    Orchestrator --> AgentOptimistic
+    AgentConservative --> Evaluator
+    AgentOptimistic --> Evaluator
+    Evaluator --> Judge
+    Input --> Judge
+    Judge --> Controller
+    Controller --> FinalDecision
+    FinalDecision --> Gradio
+
+
 Installation
 
 Clone the repository:
