@@ -30,7 +30,7 @@ flowchart TD
         AgentConservative["AgentConservative<br>(proposes decisions)"]
         AgentOptimistic["AgentOptimistic<br>(proposes decisions)"]
         Evaluator["Evaluator<br>(aggregates agent outputs)"]
-        Judge["DecisionJudge<br>(analyzes agent outputs + input)"]
+        Judge["DecisionJudge<br>(analyzes agent outputs)"]
         Controller["Controller<br>(final decision logic)"]
     end
 
