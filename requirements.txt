@@ -1,0 +1,12 @@
+# Core
+asyncio
+time
+
+# AI & OpenAI
+openai>=0.27
+
+# Web interface
+gradio>=3.45
+
+# Optional utilities (if used)
+pydantic>=2.0
